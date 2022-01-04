@@ -1,0 +1,311 @@
+/***** global *****/
+
+:root {
+	--color-text: purple;
+	--color-bg: #500C69;
+	--gradient-bg-top: linear-gradient(to bottom, #1282A2 0%, rgba(18, 130, 162, 0) 100%);
+	--gradient-bg-bottom: linear-gradient(to top, #1282A2 0%, rgba(18, 130, 162, 0) 100%);
+}
+
+
+* {
+	box-sizing: border-box;
+	font-family: Verdana, sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0 auto;
+}
+
+
+/* header */
+.header {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 3rem 3rem 0rem 3rem;
+	background: var(--gradient-bg-top);
+}
+
+.menu ul {
+	list-style: none;
+}
+
+.menu ul li {
+	padding: 7px;
+	background-color: white;
+	margin-top: 7px;
+}
+
+.menu ul li a {
+	text-decoration: none;
+	color: var(--color-text);
+	font-weight: bold;
+	padding: 5px;
+}
+
+.search label {
+	display: none;
+}
+
+
+/* main */
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
+.accessibilite {
+	display: flex;
+	justify-content: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.image {
+	width: 40%;
+}
+
+.infos {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+}
+
+.infos h1 {
+	color: var(--color-text);
+	font-size: 27px;
+}
+
+.infos p {
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.infos button {
+	padding: 0.6rem;
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+	background-color: var(--color-bg);
+	font-weight: bold;
+}
+
+.modal {
+	display: none;
+}
+
+/* partie qui somme nous  */
+.about {
+	display: flex;
+	flex-direction: column;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.about h2 {
+	text-align: center;
+	color: var(--color-text);
+}
+
+.profils {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.card {
+	width: 14%;
+	padding: 15px;
+	/* display: flex;
+	flex-direction: column; */
+	border: 2px solid var(--color-text);
+	border-radius: 3%;
+}
+
+.name {
+	color: var(--color-text);
+	font-weight: bold;
+}
+
+.job {
+	text-align: center;
+	font-style: italic;
+}
+
+/******* formulaire ******/
+.btn-form {
+	background-color: var(--color-bg);
+	display: flex;
+	justify-content: center;
+}
+
+.btn-form p {
+	color: white;
+	font-weight: bold;
+	padding-right: 2rem;
+}
+
+.btn-form button {
+	border: none;
+	background-color: var(--color-bg);
+	color: white;
+}
+
+.triangle-down, .triangle-up {
+	font-size: 2rem;
+}
+
+#triangle-up {
+	display: none;
+}
+
+/* formulaire */
+#formulaire {
+	display: none;
+	width: 100%;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	width: 80%;
+	padding: 1rem;
+	/* border: 1px solid purple; */
+}
+
+.identifiants {
+	display: flex;
+	justify-content: space-between;
+}
+
+.colonne1-text, .colonne2-text {
+	display: flex;
+	flex-direction: column;
+	margin: 0.5rem;
+}
+
+.colonne1-text div, .colonne2-text div, .cases {
+	display: flex;
+}
+
+label {
+	display: inline-block;
+	width: 10rem;
+	margin-top: 0.5rem;
+}
+
+.identifiants input[type=text] {
+	width: 15rem;
+	margin-top: 0.5rem;
+}
+
+.champs-date {
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.champs-date label {
+	width: 11rem;
+}
+
+.champs-date input {
+	margin-right: 1rem;
+}
+
+.cases {
+	justify-content: center;
+}
+
+.question-cases {
+	text-align: center;
+}
+
+.colonne1Cases div label, .colonne2Cases div label {
+	width: 13rem;
+}
+
+.label-date, .label-details {
+	display: none;
+}
+
+.champs-details {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.champs-details div {
+	width: 100%;
+}
+
+.submit {
+	height: 7rem;
+	width: 25rem;
+	align-self: flex-end;
+	background-color: var(--color-bg);
+	color: white;
+	font-weight: bold;
+}
+
+div p, .identifiants label {
+	color: var(--color-text);
+}
+
+
+/* footer */
+.footer {
+	display: flex;
+	background: var(--gradient-bg-bottom);
+	justify-content: space-around;
+	padding: 3rem;
+}
+
+footer h3 {
+	color: var(--color-text);
+	text-align: center;
+}
+
+.reseaux {
+	width: 20%;
+}
+
+.reseaux h4, .normes h4 {
+	text-align: center;
+}
+
+.icones-reseaux {
+	display: flex;
+	align-self: center;
+	justify-content: space-around;
+}
+
+.icones-reseaux img {
+	width: 2rem;
+	height: 2rem;
+}
+
+.menu-footer ul {
+	list-style: none;
+}
+
+.menu-footer ul li {
+	padding: 7px;
+	background-color: white;
+	margin-top: 7px;
+}
+
+.menu-footer ul li a {
+	text-decoration: none;
+	color: var(--color-text);
+	font-weight: bold;
+
+	padding: 5px;
+}

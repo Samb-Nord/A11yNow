@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<title>A11yNow</title>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<nav class="menu">
+			<ul>
+				<li><a href="#">Notre objectif</a></li>
+				<li><a href="#about">Qui sommes-nous ?</a></li>
+				<li><a href="#formulaire">Déclarer un incident</a></li>
+			</ul>
+		</nav>
+		<div>
+			<img src="img/a11yNow.png" alt="logo famille">
+		</div>
+		<div class="search">
+			<form>
+				<label for="search">Votre recherche</label>
+				<input type="search" name="search" id="search" title="champs recherche">
+				<button title="bouton rechercher">Search</button>
+			</form>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="modal" id="myModal">
+			<div>
+				<h3>Accessibilité numérique</h3>
+				<span>X</span>
+			</div>
+			<div class="texte-modal">
+
+			</div>
+			<div class="graph-modal"></div>
+		</div>
+		<div class="accessibilite">
+			<div class="image">
+				<img src="img/old_lady 1.png" alt="dame âgée">
+			</div>
+
+			<div class="infos">
+				<h1>Accessibilté pour tous</h1>
+				<p>Nous vous accompagnons dans vos démarches liées à l’accessibilité
+					numérique. Si vous rencontrez des difficultés pour accéder à un site web
+					ou une application mobile, contactez-nous! Abonnez-vous à notre
+					Newsletter
+					pour nos offres.</p>
+				<button id="btn-modal" title="information sur l'accessibilté numérique :
+						s'ouvre sur une fenêtre modale">Accessibilité numérique</button>
+			</div>
+		</div>
+
+		<div class="about" id="about">
+			<h2>Qui sommes-nous ?</h2>
+			<div class="profils">
+				<div class="card">
+					<img src="img/Ellipse 1-1.png" alt="">
+					<p class="name">Véronique Voila</p>
+					<p class="job">Formatrice en accessibilité</p>
+				</div>
+				<div class="card">
+					<img src="img/Ellipse 1.png" alt="">
+					<p class="name">Vanina Orangina</p>
+					<p class="job">Ergonome experte</p>
+				</div>
+				<div class="card">
+					<img src="img/Ellipse 1-2.png" alt="">
+					<p class="name">José Castagnette</p>
+					<p class="job">Responsable du café</p>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<section class="btn-form" id="clickformulaire">
+		<p>Déclarrer un accident</p>
+		<button title="déclarer un incident via le formulaire" id="triangle-down"><span
+				class="triangle-down">&#9660;</span>
+		</button>
+		<button id="triangle-up" title="bouton cacher le formulaire">
+			<span class="triangle-up">&#9650;</span>
+		</button>
+		<!-- <button onclick="declarer()">&#9650;</button> -->
+	</section>
+	<!--***** formulaire caché ******-->
+	<section class="formulaire" id="formulaire">
+		<form class="form">
+			<div class="identifiants">
+				<div class="colonne1-text">
+					<div>
+						<label for="nom">Nom*</label>
+						<input type="text" id="nom" required>
+					</div>
+					<div>
+						<label for="prenom">Prénom*</label>
+						<input type="text" id="prenom" required>
+					</div>
+				</div>
+				<div class="colonne2-text">
+					<div>
+						<label for="mail">Adresse mail*</label>
+						<input type="text" id="mail" required>
+					</div>
+					<div>
+						<label for="site">Adresse site*</label>
+						<input type="text" id="site" required>
+					</div>
+				</div>
+			</div>
+
+			<div class="question-cases">
+				<p>Vous utilisez plutôt ce site...(plusieurs réponses possibles)</p>
+			</div>
+			<div class="cases">
+				<div class="colonne1Cases">
+					<div>
+						<input type="checkbox" id="travail">
+						<label for="travail">pour le travail</label>
+					</div>
+					<div>
+						<input type="checkbox" id="loisirs">
+						<label for="loisirs">pour les loisirs</label>
+					</div>
+				</div>
+				<div class="colonne2Cases">
+					<div>
+						<input type="checkbox" id="quotidien">
+						<label for="quotidien">pour le
+							quotidien</label>
+					</div>
+					<div>
+						<input type="checkbox" id="autre">
+						<label for="autre">pour quequ'un d'autre</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="champs-date">
+				<label for="date">Date de l'incident*</label>
+				<label class="label-date" for="date-text">text</label>
+				<input type="text" id="date-text">
+				<input type="date" id="date">
+			</div>
+			<div class="questions-details">
+
+			</div>
+			<div class="champs-details">
+				<div class="paragraphe">
+					<p>Détails de l'incident*</p>
+				</div>
+				<label for="details" class="label-details">label détails</label>
+				<textarea name="details" id="details" cols="70" rows="10" required></textarea>
+				<button type="submit" title="envoyer le formulaire" class="submit">Envoyer</button>
+			</div>
+		</form>
+	</section>
+	<footer class="footer">
+		<div class="reseaux">
+			<h3>Réseaux sociaux</h3>
+			<div class="icones-reseaux">
+				<div><a href="#"><img src="img/facebook.png" alt="icone facebook"></a></div>
+				<div><a href="#"><img src="img/linkedin.png" alt="icone linkedin"></a></div>
+				<div><a href="#"><img src="img/twitter.png" alt="icone twitter"></a></div>
+				<div><a href="#"><img src="img/Vector.png" alt="icone ?"></a></div>
+			</div>
+		</div>
+
+		<div class="normes">
+			<h3>Normes et réglementations</h3>
+			<nav class="menu-footer">
+				<ul>
+					<li><a href="#">WCAG</a></li>
+					<li><a href="#">RGAA</a></li>
+					<li><a href="#">EN 301 549</a></li>
+				</ul>
+			</nav>
+		</div>
+
+	</footer>
+</body>
+
+</html>
