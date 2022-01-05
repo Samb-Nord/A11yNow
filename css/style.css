@@ -13,6 +13,10 @@
 	font-family: Verdana, sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	padding: 0;
 	margin: 0 auto;
@@ -25,6 +29,7 @@ body {
 	justify-content: space-evenly;
 	padding: 3rem 3rem 0rem 3rem;
 	background: var(--gradient-bg-top);
+	flex-wrap: wrap;
 }
 
 .menu ul {
@@ -44,8 +49,11 @@ body {
 	padding: 5px;
 }
 
-.search label {
-	display: none;
+
+#search:focus {
+	background-color: #1282A2;
+	color: white;
+	font-weight: bold;
 }
 
 
@@ -60,16 +68,18 @@ body {
 	justify-content: center;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	flex-wrap: wrap;
 }
 
 .image {
-	width: 40%;
+	width: 50rem;
 }
 
 .infos {
-	width: 20%;
+	width: 38rem;
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 .infos h1 {
@@ -82,15 +92,6 @@ body {
 	font-weight: 400;
 }
 
-.infos button {
-	padding: 0.6rem;
-	width: 70%;
-	text-align: center;
-	margin: 0 auto;
-	color: white;
-	background-color: var(--color-bg);
-	font-weight: bold;
-}
 
 .modal {
 	display: none;
@@ -101,6 +102,24 @@ body {
 	justify-content: space-evenly;
 	padding: 1.7rem;
 	align-items: center;
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+	background-color: var(--color-bg);
+	font-weight: bold;
+	transition: all .6s ease;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+#btn-modal:hover {
+	color: var(--color-bg);
+	background-color: #1282A2;
+}
+
+#btn-modal:focus {
+	background-color: var(--color-bg);
+	color: #1282A2;
 }
 
 .btn-modal img {
@@ -114,6 +133,7 @@ body {
 	flex-direction: column;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	flex-wrap: wrap;
 }
 
 .about h2 {
@@ -126,6 +146,7 @@ body {
 	justify-content: space-evenly;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	flex-wrap: wrap;
 }
 
 .card {
@@ -152,6 +173,7 @@ body {
 	background-color: var(--color-bg);
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .btn-form p {
@@ -186,26 +208,38 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	flex-wrap: wrap;
 	margin: 0 auto;
 	width: 80%;
 	padding: 1rem;
-	/* border: 1px solid purple; */
+}
+
+fieldset {
+	border: none;
+}
+
+fieldset legend {
+	visibility: hidden;
 }
 
 .identifiants {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .colonne1-text, .colonne2-text {
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 	margin: 0.5rem;
 }
 
 .colonne1-text div, .colonne2-text div, .cases {
 	display: flex;
+	flex-wrap: wrap;
 }
+
 
 label {
 	display: inline-block;
@@ -222,6 +256,7 @@ label {
 	display: flex;
 	justify-content: center;
 	margin-top: 1rem;
+	flex-wrap: wrap;
 }
 
 .champs-date label {
@@ -242,6 +277,24 @@ label {
 
 .colonne1Cases div label, .colonne2Cases div label {
 	width: 13rem;
+}
+
+.colonne1Cases div input, .colonne2Cases div input {
+	width: 13%;
+	height: 1.5rem;
+}
+
+
+
+.colonne1Cases div, .colonne2Cases div {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+}
+
+.colonne1Cases div input, .colonne2Cases div input, .colonne1Cases div label, .colonne2Cases div label {
+	display: inline-flex;
 }
 
 .label-date, .label-details {
@@ -285,6 +338,7 @@ div p, .identifiants label {
 	display: flex;
 	background: var(--gradient-bg-bottom);
 	justify-content: space-around;
+	flex-wrap: wrap;
 	padding: 3rem;
 }
 
@@ -305,6 +359,7 @@ footer h3 {
 	display: flex;
 	align-self: center;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .icones-reseaux img {
@@ -326,6 +381,5 @@ footer h3 {
 	text-decoration: none;
 	color: var(--color-text);
 	font-weight: bold;
-
 	padding: 5px;
 }

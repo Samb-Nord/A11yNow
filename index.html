@@ -22,12 +22,11 @@
 				</ul>
 			</nav>
 			<div>
-				<img src="img/a11yNow.png" alt="logo famille">
+				<img src="img/logo.png" alt="logo famille">
 			</div>
 			<div class="search">
 				<form>
-					<label for="search">Votre recherche</label>
-					<input type="search" name="search" id="search" title="champs recherche">
+					<input type="search" name="search" id="search" aria-label="recherche">
 					<button title="bouton rechercher">Search</button>
 				</form>
 			</div>
@@ -69,21 +68,24 @@
 			<div class="about" id="about">
 				<h2>Qui sommes-nous ?</h2>
 				<div class="profils">
-					<div class="card">
-						<img src="img/Ellipse 1-1.png" alt="">
+					<a class="card">
+						<img src="img/Ellipse 1-1.png" title="profil1" alt="Véronique Voila
+							formatrice en accessibilite">
 						<p class="name">Véronique Voila</p>
 						<p class="job">Formatrice en accessibilité</p>
-					</div>
-					<div class="card">
-						<img src="img/Ellipse 1.png" alt="">
+					</a>
+					<a class="card">
+						<img src="img/Ellipse 1.png" title="profil2" alt="Vanina Orangina Ergonome
+							experte">
 						<p class="name">Vanina Orangina</p>
 						<p class="job">Ergonome experte</p>
-					</div>
-					<div class="card">
-						<img src="img/Ellipse 1-2.png" alt="">
+					</a>
+					<a class="card">
+						<img src="img/Ellipse 1-2.png" title="profil3" alt="José Castagnette
+							Responsable du café">
 						<p class="name">José Castagnette</p>
 						<p class="job">Responsable du café</p>
-					</div>
+					</a>
 				</div>
 			</div>
 
@@ -99,78 +101,84 @@
 			</button>
 			<!-- <button onclick="declarer()">&#9650;</button> -->
 		</section>
+		<div><p></p></div>
 		<!--***** formulaire caché ******-->
 		<section class="formulaire" id="formulaire">
 			<form class="form" name="form">
-				<div class="identifiants">
-					<div class="colonne1-text">
-						<div>
-							<label for="nom">Nom*</label>
-							<input aria-label="nom" type="text" id="nom" name="nom" required
-								aria-required="true">
-						</div>
+				<div>
+					<fieldset class="identifiants">
+						<legend>Etat civil</legend>
+						<div class="colonne1-text">
+							<div>
+								<label for="nom">Nom*</label>
+								<input type="text" id="nom" name="nom" required
+									aria-required="true">
+							</div>
 
-						<div>
-							<label for="prenom">Prénom*</label>
-							<input aria-label="prénom" type="text" id="prenom" name="prenom"
-								required aria-required="true">
-						</div>
+							<div>
+								<label for="prenom">Prénom*</label>
+								<input type="text" id="prenom" name="prenom"
+									required aria-required="true">
+							</div>
 
-					</div>
-					<div class="colonne2-text">
-						<div>
-							<label for="mail">Adresse mail*</label>
-							<input aria-label="adresse mail" type="text" id="mail" name="mail"
-								required aria-required="true">
 						</div>
+						<div class="colonne2-text">
+							<div>
+								<label for="mail">Adresse mail*</label>
+								<input type="text" id="mail" name="mail"
+									required aria-required="true">
+							</div>
 
-						<div>
-							<label for="site">Adresse site*</label>
-							<input aria-label="adresse du site" type="text" id="site" name="site"
-								required aria-required="true">
+							<div>
+								<label for="site">Adresse site*</label>
+								<input type="text" id="site" name="site"
+									required aria-required="true">
+							</div>
 						</div>
-
-					</div>
+					</fieldset>
 				</div>
+				<fieldset><legend>Choix multiples</legend>
+					<div class="question-cases">
+						<p title="question choix checkbox">Vous utilisez plutôt ce
+							site...(plusieurs réponses possibles)</p>
+					</div>
+					<div class="cases">
+						<div class="colonne1Cases">
+							<div>
+								<label for="travail">pour le travail</label>
+								<input role="checkbox" aria-checked="false" type="checkbox" id="travail"
+									name="travail">
 
-				<div class="question-cases">
-					<p aria-labelledby="question choix checkbox">Vous utilisez plutôt ce
-						site...(plusieurs réponses possibles)</p>
-				</div>
-				<div class="cases">
-					<div class="colonne1Cases">
-						<div>
-							<input role="checkbox" aria-checked="false" type="checkbox" id="travail"
-								name="travail" aria-label="pour le travail">
-							<label for="travail">pour le travail</label>
+							</div>
+							<div>
+								<label for="loisirs">pour les loisirs</label>
+								<input role="checkbox" aria-checked="false" type="checkbox" id="loisirs"
+									name="loisirs">
+
+							</div>
 						</div>
-						<div>
-							<input role="checkbox" aria-checked="false" type="checkbox" id="loisirs"
-								name="loisirs" aria-label="pour les loisirs">
-							<label for="loisirs">pour les loisirs</label>
-						</div>
-					</div>
-					<div class="colonne2Cases">
-						<div>
-							<input role="checkbox" aria-checked="false" type="checkbox"
-								id="quotidien" name="quotidien" aria-label="pour le quotidien">
-							<label for="quotidien">pour le
-								quotidien</label>
-						</div>
-						<div>
-							<input role="checkbox" aria-checked="false" type="checkbox" id="autre"
-								name="autre" aria-label="pour quelqu'un d'autre">
-							<label for="autre">pour quequ'un d'autre</label>
+						<div class="colonne2Cases">
+							<div>
+								<label for="quotidien">pour le
+									quotidien</label>
+								<input role="checkbox" aria-checked="false" type="checkbox"
+									id="quotidien" name="quotidien">
+
+							</div>
+							<div>
+								<label for="autre">pour quequ'un d'autre</label>
+								<input role="checkbox" aria-checked="false" type="checkbox" id="autre"
+									name="autre">
+							</div>
 						</div>
 					</div>
-				</div>
+				</fieldset>
 
 				<div class="champs-date">
 					<label for="date">Date de l'incident*</label>
 					<label class="label-date" for="date-text">text</label>
 					<input type="text" id="date-text" name="date">
-					<input type="date" id="date" name="date" required aria-required="true"
-						aria-label="date">
+					<input type="date" id="date" name="date" required aria-required="true">
 				</div>
 				<div class="questions-details">
 
@@ -181,7 +189,7 @@
 					</div>
 					<label for="details" class="label-details">label détails</label>
 					<textarea name="details" id="details" cols="70" rows="10" required
-						aria-required="true" aria-label="détails de l'incident"></textarea>
+						aria-required="true"></textarea>
 					<button type="submit" title="envoyer le formulaire" class="submit"
 						id="send">Envoyer</button>
 				</div>
@@ -206,9 +214,9 @@
 				<h3>Normes et réglementations</h3>
 				<nav class="menu-footer">
 					<ul>
-						<li><a href="#" title="WCAG">WCAG</a></li>
-						<li><a href="#" title="RGAA">RGAA</a></li>
-						<li><a href="#" title="EN 301 549">EN 301 549</a></li>
+						<li><a href="#" title="lien norme WCAG">WCAG</a></li>
+						<li><a href="#" title="lien norme RGAA">RGAA</a></li>
+						<li><a href="#" title="lien norme EN 301 549">EN 301 549</a></li>
 					</ul>
 				</nav>
 			</div>
