@@ -96,6 +96,18 @@ body {
 	display: none;
 }
 
+#btn-modal {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 1.7rem;
+	align-items: center;
+}
+
+.btn-modal img {
+	width: 2rem;
+	height: 1.5rem;
+}
+
 /* partie qui somme nous  */
 .about {
 	display: flex;
@@ -257,6 +269,14 @@ label {
 
 div p, .identifiants label {
 	color: var(--color-text);
+}
+
+/***** les textes erreurs du formulaire *****/
+.erreur {
+	color: rgb(131, 31, 31);
+	font-weight: bold;
+	font-size: small;
+	display: none;
 }
 
 
