@@ -92,12 +92,7 @@ body {
 	font-weight: 400;
 }
 
-
-.modal {
-	display: none;
-}
-
-#btn-modal {
+#js-modal {
 	display: flex;
 	justify-content: space-evenly;
 	padding: 1.7rem;
@@ -112,17 +107,17 @@ body {
 	align-content: center;
 }
 
-#btn-modal:hover {
+#js-modal:hover {
 	color: var(--color-bg);
 	background-color: #1282A2;
 }
 
-#btn-modal:focus {
+#js-modal:focus {
 	background-color: var(--color-bg);
 	color: #1282A2;
 }
 
-.btn-modal img {
+.js-modal img {
 	width: 2rem;
 	height: 1.5rem;
 }
@@ -198,7 +193,7 @@ body {
 
 /* formulaire */
 #formulaire {
-	display: none;
+	display: block;
 	width: 100%;
 	margin-top: 2rem;
 	margin-bottom: 2rem;

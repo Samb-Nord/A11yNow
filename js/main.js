@@ -29,9 +29,9 @@ window.onload = function () {
             alert("yes!")
         }
     })
-
-
 }
+
+
 
 
 function isChampsNotEmpty() {

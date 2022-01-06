@@ -8,8 +8,10 @@
 		<link rel="stylesheet" href="css/responsive.css">
 		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="css/modal.css">
 		<title>A11yNow</title>
-		<script type="text/javascript" src="js/main.js"></script>
+	
+		<!-- <script type="text/javascript" src="js/app.js"></script> -->
 	</head>
 
 	<body>
@@ -22,10 +24,10 @@
 				</ul>
 			</nav>
 			<div>
-				<img src="img/logo.png" alt="logo famille">
+				<img src="img/logo.png" alt="logo">
 			</div>
 			<div class="search">
-				<form>
+				<form  role="search">
 					<input type="search" name="search" id="search" aria-label="recherche">
 					<button title="bouton rechercher">Search</button>
 				</form>
@@ -33,16 +35,6 @@
 		</header>
 
 		<main class="main">
-			<div class="modal" id="myModal">
-				<div>
-					<h3>Accessibilité numérique</h3>
-					<span>X</span>
-				</div>
-				<div class="texte-modal">
-
-				</div>
-				<div class="graph-modal"></div>
-			</div>
 			<div class="accessibilite">
 				<div class="image">
 					<img src="img/old_lady 1.png" alt="dame âgée">
@@ -55,7 +47,7 @@
 						ou une application mobile, contactez-nous! Abonnez-vous à notre
 						Newsletter
 						pour nos offres.</p>
-					<button id="btn-modal" title="information sur l'accessibilté numérique :
+					<button aria-haspopup="true" id="js-modal" title="information sur l'accessibilté numérique :
 						s'ouvre sur une fenêtre modale" class="btn-modal">
 						<div>Accessibilité numérique</div>
 						<div><img title="icone bonhomme"
@@ -64,25 +56,106 @@
 					</button>
 				</div>
 			</div>
+			<!--********************** début modal  ******************-->
+			<aside id="maModal" class="modal" aria-hidden="true" role="dialog"
+				aria-labelledby="titremodal"
+				style="display: none;">
+				<div class="modal-wrapper js-modal-stop">
+					<button class="js-modal-close">Fermer modal</button>
+					<h1 id="titremodal">Accessibilité numérique</h1>
+					<div class="text-graph">
+						<div class="text-modal">
+							<p>“En France, les produits et services numériques sont souvent conçus
+								sans
+								prendre le temps de comprendre l’audience qu’ils servent, notamment les
+								personnes en situation de handicap soit 12 millions de personnes en
+								France.</p>
+
+							<p> services non accessibles sont le fruit de parcours trop complexes et
+								de lignes de code qui ne suivent pas les bonnes pratiques de
+								développement
+								web. Il est essentiel que designers & developers soient formés à ces
+								enjeux.</p>
+
+							<p>Depuis 2012, tous les sites publics doivent être accessibles et
+								conformes
+								à l’ensemble des critères du RGAA. Et ainsi permettre à tous les usagers
+								un égal accès à leurs droits.”
+							</p>
+							<p>
+								<a href="https://design.numerique.gouv.fr/accessibilite-numerique/"
+									title="lien source"> Source :
+									https://design.numerique.gouv.fr/accessibilite-numerique/</a>
+							</p>
+						</div>
+						<div class="graph-modal">
+							<img src="img/graphique.png" alt="graphique erreurs">
+						</div>
+					</div>
+					<div class="tableau-modal">
+						<table>
+							<caption>tableau accessibilité : erreurs</caption>
+							<thead>
+								<tr>
+									<th>WCAG Failure Type</th>
+									<th>% of home pages in Febuary</th>
+									<th>% of home pages in August</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>Low contrast text</th>
+									<td>85.3%</td>
+									<td>86.1%</td>
+								</tr>
+								<tr>
+									<th>Missing alternative text for images</th>
+									<td>68.0%</td>
+									<td>67.9%</td>
+								</tr>
+								<tr>
+									<th>Empty links</th>
+									<td>58.1%</td>
+									<td>58.9%</td>
+								</tr>
+								<tr>
+									<th>Missing form input labels</th>
+									<td>52.8%</td>
+									<td>53.2%</td>
+								</tr>
+								<tr>
+									<th>Missing document language</th>
+									<td>33.1%</td>
+									<td>30.5%</td>
+								</tr>
+								<tr>
+									<th>Empty buttons</th>
+									<td>25.0%</td>
+									<td>27.0%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</aside>
+
+			<!--********************** FIN modal  ******************-->
 
 			<div class="about" id="about">
 				<h2>Qui sommes-nous ?</h2>
 				<div class="profils">
 					<a class="card">
-						<img src="img/Ellipse 1-1.png" title="profil1" alt="Véronique Voila
-							formatrice en accessibilite">
+						<img src="img/Ellipse 1-1.png" title="profil1" alt="">
 						<p class="name">Véronique Voila</p>
 						<p class="job">Formatrice en accessibilité</p>
 					</a>
 					<a class="card">
-						<img src="img/Ellipse 1.png" title="profil2" alt="Vanina Orangina Ergonome
-							experte">
+						<img src="img/Ellipse 1.png" title="profil2" alt="">
 						<p class="name">Vanina Orangina</p>
 						<p class="job">Ergonome experte</p>
 					</a>
 					<a class="card">
-						<img src="img/Ellipse 1-2.png" title="profil3" alt="José Castagnette
-							Responsable du café">
+						<img src="img/Ellipse 1-2.png" title="profil3" alt="">
 						<p class="name">José Castagnette</p>
 						<p class="job">Responsable du café</p>
 					</a>
@@ -112,13 +185,13 @@
 							<div>
 								<label for="nom">Nom*</label>
 								<input type="text" id="nom" name="nom" required
-									aria-required="true">
+									aria-required="true" autocomplete="name">
 							</div>
 
 							<div>
 								<label for="prenom">Prénom*</label>
 								<input type="text" id="prenom" name="prenom"
-									required aria-required="true">
+									required aria-required="true" autocomplete="name">
 							</div>
 
 						</div>
@@ -126,13 +199,13 @@
 							<div>
 								<label for="mail">Adresse mail*</label>
 								<input type="text" id="mail" name="mail"
-									required aria-required="true">
+									required aria-required="true" autocomplete="email">
 							</div>
 
 							<div>
 								<label for="site">Adresse site*</label>
 								<input type="text" id="site" name="site"
-									required aria-required="true">
+									required aria-required="true" autocomplete="url">
 							</div>
 						</div>
 					</fieldset>
@@ -189,7 +262,7 @@
 					</div>
 					<label for="details" class="label-details">label détails</label>
 					<textarea name="details" id="details" cols="70" rows="10" required
-						aria-required="true"></textarea>
+						aria-required="true" autocomplete="on"></textarea>
 					<button type="submit" title="envoyer le formulaire" class="submit"
 						id="send">Envoyer</button>
 				</div>
@@ -222,6 +295,8 @@
 			</div>
 
 		</footer>
+
+	<script type="text/javascript" src="js/test.js"></script>
 	</body>
 
 </html>
