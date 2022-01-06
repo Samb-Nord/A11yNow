@@ -147,10 +147,9 @@ body {
 .card {
 	width: 14%;
 	padding: 15px;
-	/* display: flex;
-	flex-direction: column; */
 	border: 2px solid var(--color-text);
 	border-radius: 3%;
+	text-align: center;
 }
 
 .name {
@@ -193,7 +192,7 @@ body {
 
 /* formulaire */
 #formulaire {
-	display: block;
+	display: none;
 	width: 100%;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
@@ -226,7 +225,7 @@ fieldset legend {
 .colonne1-text, .colonne2-text {
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	margin: 0.5rem;
 }
 
@@ -327,6 +326,23 @@ div p, .identifiants label {
 	display: none;
 }
 
+.alert-succes {
+	display: flex;
+	visibility: hidden;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: rgb(14, 144, 64);
+	font-weight: bold;
+	padding: 0.5rem;
+	/* opacity: 0; */
+	transition: all 0.5s ease;
+	animation: animAlert 0.4s both;
+}
+
+.alert-succes p {
+	color: black;
+}
 
 /* footer */
 .footer {
@@ -377,4 +393,14 @@ footer h3 {
 	color: var(--color-text);
 	font-weight: bold;
 	padding: 5px;
+}
+
+@keyframes animAlert {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }

@@ -3,14 +3,61 @@
 
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 992px) {}
+@media (min-width: 768px) and (max-width: 992px) {
+	.image {
+		width: 37rem;
+	}
+
+	.infos {
+		width: 25rem;
+	}
+}
 
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 993px) and (max-width: 1199.98px) {}
+@media (min-width: 993px) and (max-width: 1499px) {
+	.image {
+		width: 37rem;
+	}
+
+	.infos {
+		width: 25rem;
+	}
+
+	.card {
+		width: 26%;
+	}
+
+	.colonne1Cases, .colonne2Cases {
+		width: 39%;
+	}
+
+	.colonne1Cases div input, .colonne2Cases div input {
+		width: 9%;
+	}
+
+	.submit {
+		width: 23rem;
+	}
+
+	textarea {
+		width: 41rem;
+	}
+
+
+
+	.check {
+		padding: 0.3rem;
+	}
+
+	.colonne1Cases div label, .colonne2Cases div label {
+		width: 14rem;
+		margin: 0;
+	}
+}
 
 /* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
 
 	.form {
 		width: 56%;
