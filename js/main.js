@@ -116,6 +116,7 @@ const sendForm = function (e) {
 const resetForm = function () {
 	document.querySelectorAll("input").forEach(elt => elt.value = "");
 	document.querySelectorAll("textarea").forEach(elt => elt.value = "");
+	document.querySelectorAll("input[type='checkbox']").forEach(elt => elt.checked = false);
 }
 
 document.querySelector("#triangle-down").addEventListener('click', openForm);
