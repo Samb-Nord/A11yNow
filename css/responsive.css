@@ -71,4 +71,31 @@
 		height: 3rem;
 	}
 
+.colonne1Cases, .colonne2Cases {
+		width: 39%;
+	}
+
+	.colonne1Cases div input, .colonne2Cases div input {
+		width: 9%;
+	}
+
+	.submit {
+		width: 23rem;
+	}
+
+	textarea {
+		width: 41rem;
+	}
+
+
+
+	.check {
+		padding: 0.3rem;
+	}
+
+	.colonne1Cases div label, .colonne2Cases div label {
+		width: 14rem;
+		margin: 0;
+	}
+
 }

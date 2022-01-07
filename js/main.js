@@ -3,6 +3,7 @@ let modal = null;
 const focusSelector = 'a, button, input, th, td, tr, table';
 let focusElements = [];
 let focusEltSelectedBefore = null;
+let sendBouton = document.querySelector("[type='submit']");
 
 const openModal = function (e) {
 	e.preventDefault();
@@ -80,13 +81,15 @@ const focusInModal = function (e) {
 	focusElements[index].focus();
 }
 
+
+//formulaire
 let form = document.getElementById("formulaire");
 let down = document.getElementById("triangle-down");
 let up = document.getElementById("triangle-up");
 let alert = document.querySelector(".alert-succes");
 
 const openForm = function () {
-alert.style.visibility = "hidden"
+	alert.style.visibility = "hidden"
 	form.style.display = "block";
 	down.style.display = "none";
 	up.style.display = "block";
@@ -100,17 +103,15 @@ const closeForm = function () {
 
 const sendForm = function (e) {
 	e.preventDefault();
+	//console.log(document.getElementById("date").value.toString())
 	form.style.display = "none";
 	down.style.display = "block";
 	up.style.display = "none";
 	const anim = function () {
 		alert.style.visibility = "visible"
-		// alert.style.opacity = 1;
 	}
 	setTimeout(anim, 500);
-
 	resetForm();
-
 }
 
 const resetForm = function () {
@@ -122,9 +123,16 @@ const resetForm = function () {
 document.querySelector("#triangle-down").addEventListener('click', openForm);
 document.querySelector("#triangle-up").addEventListener('click', closeForm);
 document.querySelector('#js-modal').addEventListener('click', openModal);
-document.querySelector("#send").addEventListener('click', sendForm);
+
+// document.querySelector("#date-text").addEventListener('change', () => {
+// console.log(document.getElementById("date").value)
+// document.querySelector("#date-text").val() = document.querySelector('#date').value.toString;
+// })
+document.querySelector("#formDeclarer").addEventListener('submit', sendForm);
 
 
+
+//gestion des touches au clavier
 window.addEventListener('keydown', (e) => {
 	if (e.key === "Escape" || e.key === "Esc") {
 		closeModal(e)
